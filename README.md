@@ -2,5 +2,5 @@
 npm init
 
 # Basic commands
-npx cypress open
-npx cypress run
+* npx cypress open
+* npx cypress run
