@@ -1,17 +1,18 @@
 import Base_PO from "./Base_PO";
 
-class Homepage extends Base_PO{
-    navigateToHomepage(){
-        super.navigate("");
-    }
-
+class Homepage_PO extends Base_PO{
     elements = {
-        contactUsButtom : () => cy.get("contact-us")
+        contactUsButtom : () => cy.get("#contact-us")
+    }
+    
+    navigateToHomepage(){
+        // super.navigate();
+        cy.visit("https://webdriveruniversity.com/")
     }
 
     clickOn_ContactUs_Button(){
-        cy.clickAndOpenLink_InSameTab(this.elements.contactUsButtom)
+        cy.clickAndOpenLink_InSameTab("#contact-us")
     }
 }
 
-export default Homepage;
+export default Homepage_PO;
